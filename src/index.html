@@ -1,14 +1,57 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Caesar Cipher</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root">
-      <h1>Hello world!</h1>
+<head>
+
+<title>TOP SECRET</title>
+<script src="index.js" type="module"></script>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+
+  <center>
+    <section class="categories" id="twoOptions">
+      <br>
+      <h1>!MUJER ALERTA!</h1>
+      <br>
+      <br>
+      <p> Estas en Peligro? <br> Envia un mensaje secreto de Ayuda <br> presiona el boton y envia tu mensaje de Alerta
+      </p><br>
+      <button type="button" class="button" id="pantallaCifrar">CIFRAR</button>
+      <button type="button" class="button" id="pantallaDescifrar">DESCIFRAR</button>
+    </section>
+
+    <div id="cipherScreen" style="display:none">
+      <h1>Cifrar Secreto</h1>
+      <p>Texto a cifrar</p>
+      <input type="text" id="textcipher1" class="inputText" placeholder="Escribe tu mensaje..."><br>
+      <br>
+      <label for="key">Clave &#128274</label>
+      <input type="number" placeholder="n" id="offsetEncode" class="inputNumber">
+      <button type="button" class="button" id="botonCifrar">Cipher</button>
+      <p>Secreto</p>
+      
+      <input type="text" id="cipheredSecret" class="inputText"> <br/>
+      <br>
+      <button type="button" class="button" id="volverInicio1">volver</button>
     </div>
-    <script src="index.js" type="module"></script>
-  </body>
+
+    <div id="decipherScreen" style="display:none">
+      <h1>Descifrar Secreto</h1>
+      <p>Texto a Descifrar</p>
+
+      <input type="text" id="textdecipher2" class="inputText2" placeholder="Escribe tu mensaje..."><br>
+      <br>
+      <label for="key2">Clave &#128275</label>
+      <input type="number" placeholder="n" id="offsetDecode" class="inputNumber">
+      <button type="button" class="button" id="botonDescifrar">desCipher</button>
+      <p>Secreto</p>
+
+      <input type="text" id="decipheredSecret"  class="inputText2"><br/>
+      <br>
+      <button type="button" class="button" id="volverInicio2">volver</button>
+    </div>
+  </center>
+</body>
+
 </html>
