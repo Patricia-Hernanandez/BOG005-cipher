@@ -41,34 +41,34 @@ obj2.style.display = "block";
 }
 
 // funcion boton cifrar
-let botonCifrar = document.getElementById("botonCifrar") // lamas al btn
+let botonCifrar = document.getElementById("botonCifrar") // llamas al btn
 botonCifrar.addEventListener("click", btnCifrar) // añade manejador de evento addeventlistener
 
 function btnCifrar(){  
  
   const texto = document.getElementById("textcipher1");
+  texto.value = texto.value.toUpperCase();
   const desplazamiento = document.getElementById("offsetEncode");
   const resultado = document.getElementById("cipheredSecret");
-    
-  let textoCifrado =  cipher.encode(parseInt(desplazamiento.value), texto.value);
-  resultado.value= textoCifrado;
-  console.log(textoCifrado);
+  const textoCifrado =  cipher.encode(parseInt(desplazamiento.value), texto.value);
+  resultado.value = textoCifrado;
+ 
 }
-
+  
 
 // funcion boton Descifrar
 let botonDescifrar = document.getElementById("botonDescifrar")
 botonDescifrar.addEventListener("click", btndescifrar)
 
 function btndescifrar(){
-    
-  const texto = document.getElementById("textdecipher2");
-  const desplazamiento = document.getElementById("offsetDecode");
-  const resultado = document.getElementById("decipheredSecret");
   
-  let textoDescifrado = cipher.decode(parseInt(desplazamiento.value), texto.value);
-  resultado.value= textoDescifrado;
-  console.log(textoDescifrado);
+  const texto = document.getElementById("textdecipher2");
+  texto.value = texto.value.toUpperCase();
+  const desplazamiento = document.getElementById("offsetDecode");
+  const resultado2 = document.getElementById("decipheredSecret");
+  const textoDescifrado = cipher.decode(parseInt(desplazamiento.value), texto.value);
+  resultado2.value = textoDescifrado;
+  
 
  }
 
@@ -87,7 +87,7 @@ document.getElementById("decipherScreen").style.display="none";
   
 }
 
-console.log(cipher);
+
 
 
 
